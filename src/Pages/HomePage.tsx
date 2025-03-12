@@ -1,27 +1,30 @@
 // src/pages/HomePage.tsx
-import { useState } from "react";
-import ReservationModal from "../components/ReservationModal";
+
+
 import AboutPage from "./AboutPage";
 import VideoBackground from "../components/VideoBackground";
 import useScrollToHash from "../hooks/useScrollToHash";
 import SocialPosts from "../components/SocialPosts";
 
 const HomePage: React.FC = () => {
-  const [isReservationModalOpen, setIsReservationModalOpen] = useState<boolean>(false);
-
   // Utilizza il custom hook per lo scroll basato sull'hash
   useScrollToHash();
 
   const handleReservationClick = (): void => {
-    setIsReservationModalOpen(true);
+    // Redirect to external reservation URL instead of opening modal
+    window.open("https://bassifondenti.myrestoo.net/it/reservar", "_blank", "noopener,noreferrer");
+  };
+  
+  const handleMenuClick = (): void => {
+    // Redirect to external menu URL
+    window.open("https://www.leggimenu.it/menu/bassifondenti/", "_blank", "noopener,noreferrer");
   };
 
   return (
     <>
-      <VideoBackground onReservationClick={handleReservationClick} />
-      <ReservationModal
-        isOpen={isReservationModalOpen}
-        onClose={() => setIsReservationModalOpen(false)}
+      <VideoBackground 
+        onReservationClick={handleReservationClick} 
+        onMenuClick={handleMenuClick} 
       />
       <AboutPage />
       <SocialPosts/>

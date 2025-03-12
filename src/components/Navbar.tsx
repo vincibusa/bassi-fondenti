@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import ReservationModal from "./ReservationModal";
+
 import logo from "../assets/logo.png";
 import { useNavbar } from "../contexts/NavbarContenxt";
 import { useTranslation } from "react-i18next";
@@ -13,7 +13,7 @@ const Navbar = () => {
   const location = useLocation();
   const [isNavbarTransparent, setIsNavbarTransparent] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isReservationModalOpen, setIsReservationModalOpen] = useState(false);
+  
 
   useEffect(() => {
     if (location.pathname !== "/") {
@@ -44,11 +44,16 @@ const Navbar = () => {
   const hoverClass =
     location.pathname === "/" ? "hover:text-black" : "hover:text-black";
 
-  // Definisci gli elementi della navbar con le rispettive chiavi di traduzione e rotte
+  // Definisci gli elementi della navbar con le rispettive chiavi di traduzione, rotte, e se sono link esterni
   const navItems = [
-    { key: "home", label: t("navbar.home"), route: "/" },
-    { key: "menu", label: t("navbar.menu"), route: "/menu" },
-    { key: "gallery", label: t("navbar.gallery"), route: "/galleria" },
+    { key: "home", label: t("navbar.home"), route: "/", isExternal: false },
+    { 
+      key: "menu", 
+      label: t("navbar.menu"), 
+      route: "https://www.leggimenu.it/menu/bassifondenti/", 
+      isExternal: true 
+    },
+    { key: "gallery", label: t("navbar.gallery"), route: "/galleria", isExternal: false },
   ];
 
   return (
@@ -111,12 +116,23 @@ const Navbar = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.3, delay: index * 0.1 }}
                           >
-                            <Link
-                              to={item.route}
-                              className={`text-white ${hoverClass} transition-colors`}
-                            >
-                              {item.label}
-                            </Link>
+                            {item.isExternal ? (
+                              <a
+                                href={item.route}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`text-white ${hoverClass} transition-colors`}
+                              >
+                                {item.label}
+                              </a>
+                            ) : (
+                              <Link
+                                to={item.route}
+                                className={`text-white ${hoverClass} transition-colors`}
+                              >
+                                {item.label}
+                              </Link>
+                            )}
                           </motion.li>
                         ))}
                         <motion.li
@@ -145,12 +161,14 @@ const Navbar = () => {
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.3, delay: 0.3 }}
                         >
-                          <button
-                            onClick={() => setIsReservationModalOpen(true)}
+                          <a
+                            href="https://bassifondenti.myrestoo.net/it/reservar"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className={`text-white ${hoverClass} transition-colors`}
                           >
                             {t("navbar.reservation")}
-                          </button>
+                          </a>
                         </motion.li>
                       </ul>
                     </motion.div>
@@ -161,10 +179,7 @@ const Navbar = () => {
           </motion.nav>
         )}
       </AnimatePresence>
-      <ReservationModal
-        isOpen={isReservationModalOpen}
-        onClose={() => setIsReservationModalOpen(false)}
-      />
+    
     </>
   );
 };

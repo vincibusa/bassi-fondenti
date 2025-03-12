@@ -7,92 +7,91 @@ export default {
   theme: {
     extend: {
       colors: {
-        eden: "#0c4b43",
-        iron: "#d9d9db",
-        mojo: "#bf4a3a",
-        kabul: "#63483f",
-        mineralGreen: "#436464",
-        grannySmith: "#7c9b9b",
-        codGray: "#0c0c0c",
-        gumbo: "#80a4a4",
-        cascade: "#84a49c",
-        lisbonBrown: "#3e391c",
+        corten: "#8B3E2F",
+        cortenLight: "#B05A4B",
+        cortenDark: "#6E2F24",
+        black: "#0A0A0A",
+        blackLight: "#2A2A2A",
+        charcoal: "#333333",
+        slate: "#697586",
+        smoke: "#D0D0D0",
+        chalk: "#F5F5F5",
 
         primary: {
-          DEFAULT: "#0c4b43", // Eden
+          DEFAULT: "#0A0A0A", // Black
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#63483f", // Kabul
+          DEFAULT: "#333333", // Charcoal
           foreground: "#FFFFFF",
         },
-        darkBg: "#0c0c0c", // Cod Gray
+        darkBg: "#0A0A0A", // Black
         accent: {
-          DEFAULT: "#bf4a3a", // Mojo
+          DEFAULT: "#B05A4B", // Corten Light
           foreground: "#FFFFFF",
         },
-        background: "#d9d9db", // Iron
-        foreground: "#020817",
+        background: "#F5F5F5", // Chalk
+        foreground: "#0A0A0A",
         card: {
           DEFAULT: "#FFFFFF",
-          foreground: "#020817",
+          foreground: "#0A0A0A",
         },
         popover: {
           DEFAULT: "#FFFFFF",
-          foreground: "#020817",
+          foreground: "#0A0A0A",
         },
         muted: {
-          DEFAULT: "#7c9b9b", // Granny Smith
-          foreground: "#6D7074",
+          DEFAULT: "#697586", // Slate
+          foreground: "#D0D0D0",
         },
         destructive: {
-          DEFAULT: "#FF4C4C",
+          DEFAULT: "#E53935",
           foreground: "#FFFFFF",
         },
-        border: "#80a4a4", // Gumbo
-        input: "#80a4a4",
-        ring: "#bf4a3a", // Mojo
+        border: "#D0D0D0", // Smoke
+        input: "#D0D0D0",
+        ring: "#0A0A0A", // Black
         chart: {
-          1: "#84a49c", // Cascade
-          2: "#4CAF50",
-          3: "#03A9F4",
-          4: "#FFC107",
-          5: "#8E44AD",
+          1: "#0A0A0A", // Black
+          2: "#6E2F24", // Corten Dark
+          3: "#333333", // Charcoal
+          4: "#697586", // Slate
+          5: "#B05A4B", // Corten Light
         },
         dark: {
           primary: {
-            DEFAULT: "#0c4b43", // Eden
+            DEFAULT: "#0A0A0A", // Black
             foreground: "#FFFFFF",
           },
           secondary: {
-            DEFAULT: "#63483f", // Kabul
-            foreground: "#FAFAFB",
-          },
-          accent: {
-            DEFAULT: "#bf4a3a", // Mojo
-            foreground: "#FAFAFB",
-          },
-          background: "#0c0c0c", // Cod Gray
-          foreground: "#FAFAFB",
-          card: {
-            DEFAULT: "#3e391c", // Lisbon Brown
-            foreground: "#FAFAFB",
-          },
-          popover: {
-            DEFAULT: "#3e391c", // Lisbon Brown
-            foreground: "#FAFAFB",
-          },
-          muted: {
-            DEFAULT: "#436464", // Mineral Green
-            foreground: "#6D7074",
-          },
-          destructive: {
-            DEFAULT: "#FF4C4C",
+            DEFAULT: "#697586", // Slate
             foreground: "#FFFFFF",
           },
-          border: "#80a4a4", // Gumbo
-          input: "#80a4a4",
-          ring: "#bf4a3a", // Mojo
+          accent: {
+            DEFAULT: "#B05A4B", // Corten Light
+            foreground: "#FFFFFF",
+          },
+          background: "#0A0A0A", // Black
+          foreground: "#F5F5F5", // Chalk
+          card: {
+            DEFAULT: "#2A2A2A", // Black Light
+            foreground: "#F5F5F5",
+          },
+          popover: {
+            DEFAULT: "#2A2A2A", // Black Light
+            foreground: "#F5F5F5",
+          },
+          muted: {
+            DEFAULT: "#333333", // Charcoal
+            foreground: "#D0D0D0",
+          },
+          destructive: {
+            DEFAULT: "#E53935",
+            foreground: "#FFFFFF",
+          },
+          border: "#333333", // Charcoal
+          input: "#333333",
+          ring: "#0A0A0A", // Black
         },
       },
       borderRadius: {

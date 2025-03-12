@@ -12,7 +12,7 @@ interface Image {
 }
 
 const importAllImages = (): Image[] => {
-  const modules = import.meta.glob("../assets/fermento 2.0 FOTO/*.{png,jpg,jpeg,svg}", { eager: true });
+  const modules = import.meta.glob("../assets/bassi fondenti foto/*.{png,jpg,jpeg,svg}", { eager: true });
   const imagesArray: Image[] = Object.entries(modules).map(([path, module], index) => {
     const url = (module as any).default || module;
     const altText = path.split("/").pop() || "";
@@ -89,7 +89,7 @@ const Gallery: React.FC = () => {
             className="text-heading text-center mb-5 md:mb-10 text-4xl lg:text-6xl"
             style={{ fontFamily: '"IBM Plex Sans", sans-serif' }}
           >
-           QUESTO È FERMENTO 2.0
+           QUESTO È BASSI FONDENTI
           </h1>
           <p className="text-accent text-lg">
             Impasto unico, ingredienti di prima scelta e un'atmosfera calda e accogliente.

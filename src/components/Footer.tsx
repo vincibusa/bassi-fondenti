@@ -1,30 +1,29 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
-import ReservationModal from './ReservationModal';
+
 import logo from '../assets/logo.png';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
-  const [isReservationModalOpen, setIsReservationModalOpen] = useState(false);
   const location = useLocation();
 
   const socialLinks = [
-    { icon: <FaFacebookF />, url: 'https://www.facebook.com/fermento2.0cefalu/' },
-    { icon: <FaInstagram />, url: 'https://www.instagram.com/fermento2.0cefalu/' },
+    { icon: <FaFacebookF />, url: 'https://www.instagram.com/bassifondenti?igsh=bjBtdmI0eDdxY25m' },
+    { icon: <FaInstagram />, url: 'https://www.instagram.com/bassifondenti?igsh=bjBtdmI0eDdxY25m' },
   ];
 
-  // Utilizziamo le stesse chiavi della Navbar per i link rapidi
+  // Updated quick links with external flag and proper URLs
   const quickLinks = [
-    { key: "navbar.home", path: '/' },
-    { key: "navbar.menu", path: '/menu' },
-    { key: "navbar.gallery", path: '/galleria' },
-    { key: "navbar.press", path: '/#press' },
-    { key: "navbar.reservation", path: '/prenotazioni' },
+    { key: "navbar.home", path: '/', isExternal: false },
+    { key: "navbar.menu", path: 'https://www.leggimenu.it/menu/bassifondenti/', isExternal: true },
+    { key: "navbar.gallery", path: '/galleria', isExternal: false },
+    { key: "navbar.press", path: '/#press', isExternal: false },
+    { key: "navbar.reservation", path: 'https://bassifondenti.myrestoo.net/it/reservar', isExternal: true },
   ];
 
   return (
@@ -86,13 +85,15 @@ const Footer: React.FC = () => {
                     whileHover={{ x: 5 }}
                     transition={{ type: 'spring', stiffness: 300 }}
                   >
-                    {link.key === "navbar.reservation" ? (
-                      <button
-                        onClick={() => setIsReservationModalOpen(true)}
+                    {link.isExternal ? (
+                      <a 
+                        href={link.path}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="hover:text-secondary transition-colors duration-300"
                       >
                         {t(link.key)}
-                      </button>
+                      </a>
                     ) : link.key === "navbar.press" ? (
                       <Link
                         to={link.path}
@@ -176,12 +177,7 @@ const Footer: React.FC = () => {
           </motion.div>
         </div>
       </footer>
-      {isReservationModalOpen && (
-        <ReservationModal
-          isOpen={isReservationModalOpen}
-          onClose={() => setIsReservationModalOpen(false)}
-        />
-      )}
+  
     </>
   );
 };
