@@ -24,7 +24,7 @@ const AboutPage: React.FC = () => {
   return (
     <div className="overflow-hidden">
       <HistorySection />
-  
+  <TeamGallerySection />
       <CulinaryPhilosophySection />
       <PressSection />
       {showTopBtn && <BackToTopButton onClick={goToTop} />}

@@ -2,9 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import foto1 from "../assets/fermento 2.0 FOTO/DSC_0346.jpg";
-import foto2 from "../assets/fermento 2.0 FOTO/DSC_0418.jpg";
-import foto3 from "../assets/fermento 2.0 FOTO/DSC_0567.jpg";
+import foto1 from "../assets/bassi fondenti foto/DSCF2888.jpg";
+import foto2 from "../assets/bassi fondenti foto/DSCF2948.jpg";
+import foto3 from "../assets/bassi fondenti foto/DSCF3135.jpg";
 
 interface TeamMember {
   name: string;

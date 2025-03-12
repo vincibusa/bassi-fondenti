@@ -66,6 +66,45 @@ const SocialPosts: React.FC = () => {
     };
   }, [cookiesAccepted]);
 
+  // Inject custom CSS to override Facebook's styles
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .fb_iframe_widget iframe {
+        border: none !important;
+        height: 639.5px !important;
+      }
+      .fb_iframe_widget span {
+        border: none !important;
+        overflow: visible !important;
+        height: 639.5px !important;
+        width: 100% !important;
+      }
+      .fb-post-custom-wrapper {
+        background: #FFF;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        overflow: hidden;
+        min-height: 639.5px;
+        height: 639.5px;
+        width: 326px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .fb-post {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+      }
+    `;
+    document.head.appendChild(style);
+    
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
   // Configurazione delle animazioni
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -94,28 +133,49 @@ const SocialPosts: React.FC = () => {
     }
   };
 
-  const posts = [
+  const instagramPosts = [
     {
       type: "instagram",
-      url: "https://www.instagram.com/p/DDHY1gQBSq_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      url: "https://www.instagram.com/reel/DGWIeNctVnm/?igsh=MTk2d3k4d2Y1dThqZw==",
     },
     {
       type: "instagram",
-      url: "https://www.instagram.com/p/DCjckApsBGR/?igsh=MWRwNG9mcDk3bDdh",
-    },
-    {
-      type: "instagram",
-      url: "https://www.instagram.com/p/DF7r3NoBJSg/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-    },
-    {
-      type: "instagram",
-      url: "https://www.instagram.com/p/DGN0SbFMXq7/?igsh=b3V1MzJiejk4ZG5i",
+      url: "https://www.instagram.com/reel/DG6Ex-yKGR8/?igsh=bXc3ZXh5bTd6dDQz",
     },
   ];
+  
+  const facebookPosts = [
+    {
+      type: "facebook",
+      url: "https://www.facebook.com/photo.php?fbid=1216567967141524&set=pb.100063649955227.-2207520000&type=3",
+    },
+    {
+      type: "facebook",
+      url: "https://www.facebook.com/photo.php?fbid=1224682566330064&set=pb.100063649955227.-2207520000&type=3",
+    },
+  ];
+  
+  // Combine all posts into a single array
+  const allPosts = [...instagramPosts, ...facebookPosts];
+
+  // Common styles for all social posts
+  const socialPostStyles = {
+    background: "#FFF",
+    border: 0,
+    borderRadius: "12px",
+    boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+    display: "block",
+    margin: 0,
+    minWidth: "326px",
+    minHeight: "500px", // Using min-height instead of fixed height
+    padding: 0,
+    width: "100%",
+    overflow: "visible" // Allow content to be fully visible
+  };
 
   return (
     <div className="relative w-full overflow-hidden px-4 py-10">
-            <div
+      <div
         className="absolute inset-0 bg-fixed bg-cover bg-center opacity-10"
         style={{
           backgroundImage:
@@ -124,82 +184,70 @@ const SocialPosts: React.FC = () => {
       ></div>
       <CookieConsentModal />
       
-      {/* Contenitore scrollabile */}
+      {/* Combined Social Posts Section */}
       <div className="relative">
-      <motion.div 
-          className="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory hide-scrollbar"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-                  style={{
-            scrollbarWidth: 'none',  // Firefox
-            msOverflowStyle: 'none',  // IE and Edge
-                  }}
+        <motion.div 
+          className="flex overflow-x-auto gap-10 pb-4 snap-x snap-mandatory hide-scrollbar"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          style={{
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+          }}
         >
-          {posts.map((post, index) => (
+          {allPosts.map((post, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
               className="flex-none w-[326px] snap-center"
+              style={{ marginRight: '2rem' }}
             >
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
                 className="h-full"
+                style={{ minHeight: "500px" , minWidth:"348px", border:"none !important"}} // Min-height instead of fixed height
               >
                 {post.type === "instagram" ? (
                   <blockquote
                     className="instagram-media shadow-lg rounded-lg"
                     data-instgrm-permalink={post.url}
                     data-instgrm-version="14"
-                    style={{
-                      background: "#FFF",
-                      border: 0,
-                      borderRadius: "12px",
-                      boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-                      display: "block",
-                      margin: 0,
-                      minWidth: "326px",
-                      padding: 0,
-                      width: "100%",
-                    }}
+                    style={socialPostStyles}
                   ></blockquote>
                 ) : (
                   cookiesAccepted ? (
-                    <div
-                      className="fb-post"
-                      data-href={post.url}
-                      data-width="326"
-                      data-show-text="true"
-                    ></div>
+                    <div className="fb-post-custom-wrapper">
+                      <div
+                        className="fb-post"
+                        data-href={post.url}
+                        data-width="326"
+                        data-adapt-container-width="true"
+                        data-show-text="true"
+                      ></div>
+                    </div>
                   ) : (
-                    <div className="bg-gray-100 p-8 text-center rounded-lg">
-                      <p className="text-gray-600">
-                        Accetta i cookie per visualizzare questo post.
-                      </p>
-    </div>
+                    <div 
+                      className="bg-white p-8 text-center rounded-lg shadow-lg !border-none"
+                      style={socialPostStyles}
+                    >
+                      <div className="flex items-center justify-center h-full">
+                        <p className="text-gray-600">
+                          Accetta i cookie per visualizzare questo post.
+                        </p>
+                      </div>
+                    </div>
                   )
                 )}
               </motion.div>
             </motion.div>
           ))}
         </motion.div>
+        
       </div>
-
-      {/* Indicatore di scroll */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200">
-        <motion.div
-          className="h-full bg-primary"
-          initial={{ width: "0%" }}
-          whileInView={{ width: "100%" }}
-          transition={{ duration: 0.8 }}
-        />
-      </div>
-
-  
     </div>
   );
 };
-
 
 export default SocialPosts;

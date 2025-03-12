@@ -151,10 +151,7 @@ const Footer: React.FC = () => {
                 <FaClock className="text-white" />
                 <p>{t("footer.hours.weekdays")}</p>
               </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-4"></div>
-                <p>{t("footer.hours.monday")}</p>
-              </div>
+
             </motion.div>
           </div>
 

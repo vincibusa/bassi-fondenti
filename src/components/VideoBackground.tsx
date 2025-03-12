@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Loader from "./Loader";
 import VideoBack from "../assets/videoDef.mp4";
 
-import Logo from "../assets/logo.png"; // Import the logo
+// Removed logo import as we'll use text instead
 import { useTranslation } from "react-i18next";
 
 interface VideoBackgroundProps {
@@ -44,16 +44,14 @@ const VideoBackground: React.FC<VideoBackgroundProps> = ({
           <div className="absolute inset-0 bg-black/20" />
         </div>
         <div className="relative w-full h-full flex flex-col items-center justify-center px-4 lg:px-16 text-center">
-          {/* Changed from justify-end to justify-center and removed the nested container */}
-          <div className="flex flex-col items-center">
-            {/* Logo */}
-            <img 
-              src={Logo} 
-              alt="Bassi Fondenti Logo" 
-              className="w-48 md:w-64 lg:w-72 mb-8"
-            />
+          <div className="flex flex-col items-start w-full px-8 md:px-16 lg:px-24">
+            {/* Even larger text with left alignment */}
+            <div className="text-left mb-8">
+              <h1 className="text-[5rem] md:text-[7rem] lg:text-[9rem] font-bold text-white mb-2 leading-none">Bassi</h1>
+              <h1 className="text-[5rem] md:text-[7rem] lg:text-[9rem] font-bold text-white leading-none">Fondenti</h1>
+            </div>
            
-              <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+              <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
