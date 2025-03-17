@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useTranslation, Trans } from "react-i18next";
-import FotoFratelli from "../assets/FotoFratelli.jpeg";
+import FotoFratelli from "../assets/Foto.jpg";
 
 const HistorySection: React.FC = () => {
   const { ref } = useInView({ threshold: 0.5 });
@@ -37,7 +37,7 @@ const HistorySection: React.FC = () => {
           >
             {/* Testi lunghi per desktop */}
             <p
-              className="text-foreground md:text-lg hidden lg:block"
+              className="text-foreground md:text-lg "
               style={{ fontFamily: '"Gambetta", Sans-serif' }}
             >
               <Trans
@@ -46,7 +46,7 @@ const HistorySection: React.FC = () => {
               />
             </p>
             <p
-              className="text-foreground md:text-lg hidden lg:block"
+              className="text-foreground md:text-lg "
               style={{ fontFamily: '"Gambetta", Sans-serif' }}
             >
               <Trans
@@ -55,7 +55,7 @@ const HistorySection: React.FC = () => {
               />
             </p>
             <p
-              className="text-foreground md:text-lg hidden lg:block"
+              className="text-foreground md:text-lg "
               style={{ fontFamily: '"Gambetta", Sans-serif' }}
             >
               <Trans
@@ -64,25 +64,7 @@ const HistorySection: React.FC = () => {
               />
             </p>
 
-            {/* Testi brevi per mobile */}
-            <p
-              className="text-foreground text-lg block lg:hidden"
-              style={{ fontFamily: '"Gambetta", Sans-serif' }}
-            >
-              <Trans
-                i18nKey="historySection.shortParagraph1"
-                components={{ b: <b /> }}
-              />
-            </p>
-            <p
-              className="text-foreground text-lg block lg:hidden"
-              style={{ fontFamily: '"Gambetta", Sans-serif' }}
-            >
-              <Trans
-                i18nKey="historySection.shortParagraph2"
-                components={{ b: <b /> }}
-              />
-            </p>
+         
           </motion.div>
 
           <motion.div

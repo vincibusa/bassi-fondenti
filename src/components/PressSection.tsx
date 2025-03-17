@@ -1,110 +1,128 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
+
+import Carbone from "../assets/carbone.jpg"
+import Cereali from "../assets/cereali.jpg"
+import Porcini from "../assets/porcini.jpg"
+import Classico from "../assets/classico.jpg"
+import Basilico from "../assets/basilico.jpg"
 
 interface DoughType {
   title: string;
-  description: string;
+
   image: string;
-  hydration: string;
+
 }
 
 const doughTypes: DoughType[] = [
   {
-    title: "Classico",
-    description: "Il nostro impasto tradizionale, maturato 48 ore, con una perfetta combinazione di croccantezza e morbidezza.",
-    image: "/images/impasto-classico.jpg",
-    hydration: "65%"
+    title: "Impasto classico",
+   
+    image: Classico,
+  
   },
   {
-    title: "Integrale",
-    description: "Realizzato con farine integrali selezionate, ricco di fibre e dal gusto rustico e autentico.",
-    image: "/images/impasto-integrale.jpg",
-    hydration: "70%"
+    title: "Impasto ai funghi porcini",
+
+    image: Porcini,
+
   },
   {
-    title: "Multicereali",
-    description: "Un blend speciale di cereali che conferisce un sapore unico e proprietà nutritive superiori.",
-    image: "/images/impasto-multicereali.jpg",
-    hydration: "68%"
+    title: "Impasto ai cereali",
+  
+    image: Cereali,
+
   },
   {
-    title: "Senza Glutine",
-    description: "Studiato per garantire la stessa esperienza gustativa anche a chi è intollerante al glutine.",
-    image: "/images/impasto-gluten-free.jpg",
-    hydration: "63%"
+    title: "Impasto al carbone vegetale",
+
+    image: Carbone,
+
+  },
+  {
+    title: "Impasto al basilico",
+ 
+    image: Basilico,
+
   }
 ];
 
 const PressSection: React.FC = () => {
-  const { t } = useTranslation();
-
   return (
-    <section id="our-dough" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <motion.h2
+    <section id="press" className="py-24 bg-gradient-to-b from-background to-background/95">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-heading text-center mb-10 md:mb-16 text-4xl lg:text-6xl"
-          style={{ fontFamily: '"IBM Plex Sans", sans-serif' }}
+          className="text-center mb-16"
         >
-          La Nostra Pizza
-        </motion.h2>
+          <h2 className="text-heading text-4xl md:text-5xl lg:text-6xl mb-6 font-bold">
+            LA NOSTRA PIZZA
+          </h2>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 items-start">
-          {/* Sezione sinistra con il testo sulla pizza */}
+        {/* Single column layout instead of two columns */}
+        <div className="flex flex-col gap-16">
+          {/* Text section (no longer sticky) */}
           <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
             <div className="prose prose-lg max-w-none">
-              <p className="text-foreground text-lg mb-6" style={{ fontFamily: '"Gambetta", Sans-serif' }}>
-                La nostra pizza nasce da una profonda passione per l'arte della panificazione e dalla ricerca costante dell'eccellenza. Ogni impasto è il risultato di anni di sperimentazione e dedizione.
-              </p>
-              <p className="text-foreground text-lg mb-6" style={{ fontFamily: '"Gambetta", Sans-serif' }}>
-                Utilizziamo solo farine selezionate di altissima qualità, combinate con tecniche di lievitazione naturale e lunghe maturazioni che possono durare fino a 72 ore. Questo processo conferisce ai nostri impasti una digeribilità superiore e un profilo aromatico unico.
-              </p>
-              <p className="text-foreground text-lg" style={{ fontFamily: '"Gambetta", Sans-serif' }}>
-                La nostra filosofia si basa sul rispetto della tradizione napoletana, arricchita da tecniche moderne e ingredienti innovativi, per offrire un'esperienza gastronomica indimenticabile.
-              </p>
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-foreground text-lg md:text-xl mb-8 leading-relaxed"
+                style={{ fontFamily: '"Gambetta", Sans-serif' }}
+              >
+Alla base dei nostri impasti solo ingredienti di altissima qualità.
+Il lievito madre è base di partenza per la creazione di un prefermento. L’impasto ha un’idratazione del 75% e subisce una lievitazione di 72 ore. Cotta in forno a legna, la nostra pizza può definirsi una <b>contemporanea</b> dal bordo alto.
+              </motion.p>
+
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="text-foreground text-lg md:text-xl leading-relaxed"
+                style={{ fontFamily: '"Gambetta", Sans-serif' }}
+              >
+                La nostra creatività delinea quattro <b>impasti speciali</b>, utilizzati anche per la creazione dei <b>bun</b> per hamburger. 
+              </motion.p>
             </div>
           </motion.div>
 
-          {/* Sezione destra con le card degli impasti */}
+          {/* Cards section - now below the text */}
           <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="grid grid-cols-2 gap-4"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8"
           >
             {doughTypes.map((dough, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-lg shadow-md overflow-hidden"
+                className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="aspect-w-1 aspect-h-1 overflow-hidden">
+                <div className="aspect-w-16 aspect-h-12 overflow-hidden">
                   <img
                     src={dough.image}
                     alt={dough.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-4">
-                  <h4 className="text-lg font-semibold mb-2" style={{ fontFamily: '"Gambetta", Sans-serif' }}>
+                <div className="p-6">
+                  <h4 className="text-xl font-bold mb-3 text-heading group-hover:text-primary transition-colors duration-300"
+                      style={{ fontFamily: '"Gambetta", Sans-serif' }}>
                     {dough.title}
                   </h4>
-                  <p className="text-sm text-foreground mb-2" style={{ fontFamily: '"Gambetta", Sans-serif' }}>
-                    {dough.description}
-                  </p>
-                  <p className="text-primary font-semibold" style={{ fontFamily: '"IBM Plex Sans", sans-serif' }}>
-                    Idratazione: {dough.hydration}
-                  </p>
+             
                 </div>
               </motion.div>
             ))}

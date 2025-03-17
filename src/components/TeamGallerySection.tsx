@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import foto1 from "../assets/bassi fondenti foto/DSCF2888.jpg";
+import foto1 from "../assets/bassi fondenti foto/DSCF2875.jpg";
 import foto2 from "../assets/bassi fondenti foto/DSCF2948.jpg";
 import foto3 from "../assets/bassi fondenti foto/DSCF3135.jpg";
 

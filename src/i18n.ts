@@ -53,7 +53,7 @@ const resources = {
       "footer.address.line1": "Via Cavour , 43",
       "footer.address.line2": "97019, Vittoria , RG",
       "footer.phone": "Tel: +39 0932 161 8460",
-      "footer.email": "info@fermento2.0.com",
+      "footer.email": "bassifondenti@gmail.com",
       "footer.hours.weekdays": "Monday-Sunday: 12-14, 19-00",
 
       "footer.copyright":
@@ -87,16 +87,12 @@ const resources = {
       // HistorySection texts
       "historySection.title": "LA NOSTRA STORIA",
       "historySection.paragraph1":
-        "Nel cuore del centro storico di Cefalù, a pochissimi passi dal Duomo, Bassi Fondenti è il progetto dei due fratelli <b>Salvatore e Rosario Mirenda</b> che nasce nel 2021 con l’intento di far vivere un’esperienza di gusto e sperimentazione.",
+        "Nel centro storico di Vittoria, Bassifondenti è una realtà ristorativa che ruota attorno al concetto di “famiglia”.",
       "historySection.paragraph2":
-        "In un locale dallo stile industrial e dal carattere personale, la <b>pizza</b> proposta è una napoletana che parla contemporaneo. Da un <b>blend di farina di tipo 1 e integrale</b>, con una lievitazione tra le sedici e le venti ore, prende vita un impasto leggero dalla trama rustica, in grado di conquistare anche i palati più esigenti. Non una semplice pizza ma un <b>racconto gustativo</b> che porta in tavola tutti i sapori della Sicilia.",
+        "Rilevato dai coniugi <b>Mario Giombarresi e Alina Caprian</b> nel Marzo 2019, insieme al loro piccolo <b>Valerio</b>, il locale è caratterizzato da una personalità “gourmet” che si ritrova sia nei piatti del menu ristorante che nelle pizze.",
       "historySection.paragraph3":
-        "Non mancano opzioni alternative come la <b>pizza in doppia cottura</b>, prima fritta e poi passata al forno per una maggiore croccantezza, o il <b>padellino</b> che prevede l’utilizzo di un impasto pre-fermentato e rimpastato per poi essere cotto e farcito, rendendo giustizia alle <b>materie prime</b> del territorio.",
-      "historySection.shortParagraph1":
-        "Nel cuore del centro storico di Cefalù, a pochissimi passi dal Duomo, Bassi Fondenti è il progetto dei due <b>fratelli Salvatore e Rosario Mirenda</b> che nasce nel 2021 con l’intento di far vivere un’esperienza di gusto e sperimentazione.",
-      "historySection.shortParagraph2":
-        "In un locale dallo stile industrial e dal carattere personale, la <b>pizza</b> proposta è una napoletana che parla contemporaneo. L’impasto unico e leggero dalla trama rustica conquista anche i palati più esigenti, rendendo giustizia alle <b>materie prime</b> del territorio. Non una pizza ma un <b>racconto gustativo</b> che porta in tavola tutti i sapori della Sicilia.",
-      "historySection.image.alt": "Salvatore e Rosario Mirenda",
+        "La scelta delle <b>materie prime</b> ricade su prodotti genuini, di altissima qualità e territoriali, forniti da aziende locali. Un legame strettissimo, quello fra <b>pizza e cucina</b>, ha come filo conduttore la <b>stagionalità</b> che si esprime nella variazione dei menu, ogni 4 mesi. Una realtà che offre la possibilità fare una vera e propria <b>esperienza gustativa</b> cambiando anche <b>location</b>: in inverno, una sorta di <b>giardino esterno coperto</b>, in estate piena vista mare dal <b>pontile di Scoglitti</b>.",
+     
       "historySection.image.caption": "Fondatori di Pizzeria Bassi Fondenti",
       // Cookie consent texts
       "cookieConsent.text":
@@ -122,7 +118,7 @@ const resources = {
       "footer.address.line1": "Via Cavour , 43",
       "footer.address.line2": "97019, Vittoria , RG",
       "footer.phone": "Tel: +39 0932 161 8460",
-      "footer.email": "info@fermento2.0.com",
+      "footer.email": "bassifondenti@gmail.com",
       "footer.hours.weekdays": "Lunedì-Domenica: 12-14, 19-00",
 
       "footer.copyright":
@@ -192,7 +188,7 @@ const resources = {
       "footer.address.line1": "Via Cavour , 43",
       "footer.address.line2": "97019, Vittoria , RG",
       "footer.phone": "Tél: +39 0932 161 8460",
-      "footer.email": "info@fermento2.0.com",
+      "footer.email": "bassifondenti@gmail.com",
       "footer.hours.weekdays": "Lundi-Dimanche: 12-14, 19-00",
 
       "footer.copyright":
@@ -253,7 +249,7 @@ const resources = {
       "footer.address.line1": "Via Cavour , 43",
       "footer.address.line2": "97019, Vittoria , RG",
       "footer.phone": "Tel: +39 0932 161 8460",
-      "footer.email": "info@fermento2.0.com",
+      "footer.email": "bassifondenti@gmail.com",
       "footer.hours.weekdays": "Montag-Sonntag: 12-14, 19-00",
      
       "footer.copyright": "© {{year}} Bassi Fondenti. Alle Rechte vorbehalten.",
