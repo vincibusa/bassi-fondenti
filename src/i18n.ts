@@ -4,71 +4,41 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      // CallToActionButtons texts
-      reservationButton: "Book a Table",
+     reservationButton: "Book a Table",
       viewMenuButton: "View Menu",
-      // Navbar texts
       "navbar.logoAlt": "Pizzeria Bassi Fondenti",
-      "navbar.toggleMenu": "Toggle menu",
+      "navbar.toggleMenu": "Show/Hide menu",
       "navbar.home": "Home",
       "navbar.menu": "Menu",
       "navbar.gallery": "Gallery",
       "navbar.press": "Press",
-      "navbar.reservation": "Reservation",
-      // HistorySection texts
-      "historySection.title": "OUR HISTORY",
-      "historySection.paragraph1":
-        "In the heart of the historic center of Cefalù, just steps from the Duomo, Bassi Fondenti is the project of the two brothers <b>Salvatore and Rosario Mirenda</b>, founded in 2021 with the aim of offering a taste and experimentation experience.",
-      "historySection.paragraph2":
-        "In a venue with an industrial style and personal character, the <b>pizza</b> offered is a Neapolitan one that speaks in a contemporary language. From a <b>blend of type 1 and wholemeal flour</b>, with a fermentation lasting between sixteen and twenty hours, a light dough with a rustic texture is born, capable of satisfying even the most demanding palates. Not just a pizza but a <b>tasty story</b> that brings all the flavors of Sicily to the table.",
-      "historySection.paragraph3":
-        "Alternative options are available, such as the <b>double-cooked pizza</b>, first fried and then baked for extra crispiness, or the <b>small pan pizza</b> which uses a pre-fermented and reworked dough before being cooked and topped, doing justice to the <b>local ingredients</b>.",
-      "historySection.shortParagraph1":
-        "In the heart of the historic center of Cefalù, just steps from the Duomo, Bassi Fondenti is the project of the two <b>brothers Salvatore and Rosario Mirenda</b>, founded in 2021 with the aim of offering a taste and experimentation experience.",
-      "historySection.shortParagraph2":
-        "In a venue with an industrial style and personal character, the <b>pizza</b> offered is a Neapolitan one that speaks in a contemporary language. The unique and light dough with a rustic texture satisfies even the most demanding palates, doing justice to the <b>local ingredients</b>. Not just a pizza but a <b>tasty story</b> that brings all the flavors of Sicily to the table.",
-      "historySection.image.alt": "Salvatore and Rosario Mirenda",
-      "historySection.image.caption": "Founders of Bassi Fondenti",
-      // Cookie consent texts
-      "cookieConsent.text":
-        "We use cookies to improve your browsing experience. Please choose your preferences.",
+      "navbar.reservation": "Reservations",
+      "historySection.title": "OUR STORY",
+      "historySection.paragraph1": "In the historic center of Vittoria, Bassifondenti is a dining reality that revolves around the concept of 'family'.",
+      "historySection.paragraph2": "Taken over by spouses <b>Mario Giombarresi and Alina Caprian</b> in March 2019, along with their little <b>Valerio</b>, the restaurant has a 'gourmet' personality reflected both in the restaurant menu dishes and in the pizzas.",
+      "historySection.paragraph3": "The choice of <b>raw materials</b> falls on genuine, high-quality, and locally sourced products, supplied by local businesses. A strong bond between <b>pizza and cuisine</b> follows the thread of <b>seasonality</b>, reflected in the menu variations every 4 months. This reality offers a true <b>taste experience</b> while also changing <b>location</b>: in winter, a sort of <b>covered outdoor garden</b>, in summer, full sea view from the <b>Scoglitti pier</b>.",
+      "historySection.image.caption": "Founders of Pizzeria Bassi Fondenti",
+      "cookieConsent.text": "We use cookies to enhance your browsing experience. Choose your preferences.",
       "cookieConsent.acceptAll": "Accept All",
-      "cookieConsent.acceptEssential": "Only Essential",
-      // CulinaryPhilosophySection texts
+      "cookieConsent.acceptEssential": "Essential Only",
       "culinaryPhilosophy.item1.title": "Service and Hospitality",
-      "culinaryPhilosophy.item1.description":
-        "We love taking care of our customers",
+      "culinaryPhilosophy.item1.description": "We love taking care of our customers",
       "culinaryPhilosophy.item2.title": "Quality Ingredients",
-      "culinaryPhilosophy.item2.description":
-        "We select the best flours and choose the finest seasonal products",
+      "culinaryPhilosophy.item2.description": "We select the best flours and choose the finest seasonal products",
       "culinaryPhilosophy.item3.title": "Perfect Pairings",
-      "culinaryPhilosophy.item3.description":
-        "Our wine list offers many choices, not just local options",
-      // Footer texts
+      "culinaryPhilosophy.item3.description": "Our wine list offers many options, not just local ones",
       "footer.tagline": "Authenticity in every bite.",
-      "footer.description":
-        "Our passion for pizza is reflected in every dish we serve!",
+      "footer.description": "Our passion for pizza is reflected in every dish we serve!",
       "footer.quickLinksHeader": "Quick Links",
-      "footer.contactHeader": "Contact",
-      "footer.address.line1": "Via Cavour , 43",
-      "footer.address.line2": "97019, Vittoria , RG",
+      "footer.contactHeader": "Contacts",
+      "footer.address.line1": "Via Cavour, 43",
+      "footer.address.line2": "97019, Vittoria, RG",
       "footer.phone": "Tel: +39 0932 161 8460",
       "footer.email": "bassifondenti@gmail.com",
       "footer.hours.weekdays": "Monday-Sunday: 12-14, 19-00",
-
-      "footer.copyright":
-        "© {{year}} Bassi Fondenti. All rights reserved.",
-      // PressSection texts
-      "pressSection.heading": "PRESS & RECOGNITIONS",
-      "pressSection.leftArticle.title":
-        "Awarded by Gambero Rosso with 'Uno Spicchio' in the Italian Pizzerie Guide 2025",
-      "pressSection.leftArticle.preview":
-        "The brothers Salvatore and Rosario Mirenda have received the prestigious Gambero Rosso recognition with their pizzeria Bassi Fondenti in Cefalù. The 'Pizzerie d'Italia 2025' guide awarded them 'Uno Spicchio', praising their dedication to the art of pizza and the use of high-quality ingredients.",
-      "pressSection.leftArticle.imageAlt": "Gambero Rosso Award",
-      "pressSection.article.readMore": "Read full article",
-      "pressSection.readMoreArticles": "Read more articles",
-      // Team gallery texts
-      "teamGallerySection.heading": "GALLERY",
+      "footer.copyright": "© {{year}} Pizzeria Bassi Fondenti. All rights reserved.",
+      "pressSection.heading": "RECOGNITIONS AND PRESS",
+      "teamGallerySection.heading": "GALLERY"
     },
   },
   it: {
@@ -153,17 +123,12 @@ const resources = {
       // HistorySection texts
       "historySection.title": "NOTRE HISTOIRE",
       "historySection.paragraph1":
-        "Au cœur du centre historique de Cefalù, à deux pas du Duomo, Bassi Fondenti est le projet des deux frères <b>Salvatore et Rosario Mirenda</b>, lancé en 2021 avec l'intention de faire vivre une expérience de goût et d'expérimentation.",
+        "Dans le centre historique de Vittoria, Bassifondenti est une réalité de restauration qui tourne autour du concept de 'famille'.",
       "historySection.paragraph2":
-        "Dans un lieu au style industriel et au caractère personnel, la <b>pizza</b> proposée est une pizza napolitaine au langage contemporain. À partir d'un <b>mélange de farine de type 1 et complète</b>, avec une fermentation de seize à vingt heures, une pâte légère à la texture rustique naît, capable de satisfaire même les palais les plus exigeants. Ce n'est pas une simple pizza mais une <b>histoire gustative</b> qui apporte à table toutes les saveurs de la Sicile.",
+        "Reprise par les époux <b>Mario Giombarresi et Alina Caprian</b> en mars 2019, avec leur petit <b>Valerio</b>, l'établissement a une personnalité 'gourmet' qui se reflète aussi bien dans les plats du menu du restaurant que dans les pizzas.",
       "historySection.paragraph3":
-        "Des options alternatives ne manquent pas, comme la <b>pizza à double cuisson</b>, d'abord frite puis passée au four pour plus de croustillant, ou le <b>padellino</b> qui utilise une pâte pré-fermentée et retravaillée avant d'être cuite et garnie, rendant hommage aux <b>ingrédients locaux</b>.",
-      "historySection.shortParagraph1":
-        "Au cœur du centre historique de Cefalù, à deux pas du Duomo, Bassi Fondenti est le projet des deux frères <b>Salvatore et Rosario Mirenda</b>, lancé en 2021 pour offrir une expérience de goût et d'expérimentation.",
-      "historySection.shortParagraph2":
-        "Dans un lieu au style industriel et au caractère personnel, la <b>pizza</b> proposée est une pizza napolitaine contemporaine. La pâte unique et légère à la texture rustique satisfait même les palais les plus exigeants, rendant hommage aux <b>ingrédients locaux</b>. Ce n'est pas une pizza mais une <b>histoire gustative</b> qui apporte à table toutes les saveurs de la Sicile.",
-      "historySection.image.alt": "Salvatore et Rosario Mirenda",
-      "historySection.image.caption": "Fondateurs de Bassi Fondenti",
+        "Le choix des <b>matières premières</b> repose sur des produits authentiques, de haute qualité et locaux, fournis par des entreprises locales. Un lien très fort entre <b>pizza et cuisine</b> suit le fil de la <b>saisonnalité</b>, qui s'exprime dans la variation des menus tous les 4 mois. Cette réalité offre la possibilité de faire une véritable <b>expérience gustative</b> en changeant également de <b>lieu</b>: en hiver, une sorte de <b>jardin extérieur couvert</b>, en été vue complète sur la mer depuis la <b>jetée de Scoglitti</b>.",
+      "historySection.image.caption": "Fondateurs de Pizzeria Bassi Fondenti",
       // Cookie consent texts
       "cookieConsent.text":
         "Nous utilisons des cookies pour améliorer votre expérience de navigation. Veuillez choisir vos préférences.",
@@ -190,9 +155,8 @@ const resources = {
       "footer.phone": "Tél: +39 0932 161 8460",
       "footer.email": "bassifondenti@gmail.com",
       "footer.hours.weekdays": "Lundi-Dimanche: 12-14, 19-00",
-
       "footer.copyright":
-        "© {{year}} Bassi Fondenti. Tous droits réservés.",
+        "© {{year}} Pizzeria Bassi Fondenti. Tous droits réservés.",
       // PressSection texts
       "pressSection.heading": "RECONNAISSANCES ET PRESSE",
       "pressSection.leftArticle.title":
@@ -204,8 +168,6 @@ const resources = {
       "pressSection.readMoreArticles": "Lire plus d'articles",
       // Team gallery texts
       "teamGallerySection.heading": "GALERIE",
-
-     
     },
   },
   de: {
@@ -223,38 +185,34 @@ const resources = {
       "navbar.reservation": "Reservierungen",
       // HistorySection texts
       "historySection.title": "UNSERE GESCHICHTE",
-      "historySection.paragraph1": "Im Herzen des historischen Zentrums von Cefalù, nur wenige Schritte vom Duomo entfernt, ist Bassi Fondenti das Projekt der beiden Brüder <b>Salvatore und Rosario Mirenda</b>, das 2021 ins Leben gerufen wurde, um ein Geschmackserlebnis und Experimentierfreude zu bieten.",
-      "historySection.paragraph2": "In einem Lokal mit industriellem Stil und persönlichem Charakter ist die <b>Pizza</b> eine neapolitanische Pizza, die in zeitgenössischer Sprache spricht. Aus einer <b>Mischung aus Typ-1- und Vollkornmehl</b> mit einer Fermentationsdauer von sechzehn bis zwanzig Stunden entsteht ein leichter Teig mit rustikaler Textur, der selbst die anspruchsvollsten Gaumen zufriedenstellt. Es ist nicht nur eine Pizza, sondern eine <b>geschmackliche Geschichte</b>, die alle Aromen Siziliens auf den Tisch bringt.",
-      "historySection.paragraph3": "Alternative Optionen sind verfügbar, wie die <b>Doppeltgebackene Pizza</b> – zuerst frittiert und dann im Ofen gebacken für extra Knusprigkeit – oder die <b>Padellino-Pizza</b>, bei der ein vorfermentierter und neu durchgekneteter Teig verwendet wird, der dann gebacken und belegt wird, um den <b>regionalen Zutaten</b> gerecht zu werden.",
-      "historySection.shortParagraph1": "Im Herzen des historischen Zentrums von Cefalù, nur wenige Schritte vom Duomo entfernt, ist Bassi Fondenti das Projekt der beiden <b>Brüder Salvatore und Rosario Mirenda</b>, das 2021 ins Leben gerufen wurde, um ein Geschmackserlebnis und Experimentierfreude zu bieten.",
-      "historySection.shortParagraph2": "In einem Lokal mit industriellem Stil und persönlichem Charakter ist die <b>Pizza</b> eine neapolitanische Pizza, die in zeitgenössischer Sprache spricht. Der einzigartige, leichte Teig mit rustikaler Textur überzeugt selbst die anspruchsvollsten Gaumen und bringt den <b>regionalen Zutaten</b> gerecht. Es ist nicht nur eine Pizza, sondern eine <b>geschmackliche Geschichte</b>, die alle Aromen Siziliens auf den Tisch bringt.",
-      "historySection.image.alt": "Salvatore und Rosario Mirenda",
-      "historySection.image.caption": "Gründer von Bassi Fondenti",
+      "historySection.paragraph1": "Im historischen Zentrum von Vittoria ist Bassifondenti eine gastronomische Realität, die sich um das Konzept der 'Familie' dreht.",
+      "historySection.paragraph2": "Übernommen von den Eheleuten <b>Mario Giombarresi und Alina Caprian</b> im März 2019, zusammen mit ihrem kleinen <b>Valerio</b>, hat das Restaurant eine 'Gourmet'-Persönlichkeit, die sich sowohl in den Gerichten des Restaurant-Menüs als auch in den Pizzen widerspiegelt.",
+      "historySection.paragraph3": "Die Wahl der <b>Rohstoffe</b> fällt auf echte, hochwertige und lokale Produkte, die von lokalen Unternehmen geliefert werden. Eine starke Bindung zwischen <b>Pizza und Küche</b> folgt dem Leitfaden der <b>Saisonalität</b>, die sich in den Menüvariationen alle 4 Monate ausdrückt. Diese Realität bietet die Möglichkeit, ein wahres <b>Geschmackserlebnis</b> zu machen und dabei auch den <b>Standort</b> zu wechseln: im Winter eine Art <b>überdachter Außengarten</b>, im Sommer voller Meerblick vom <b>Pier in Scoglitti</b>.",
+      "historySection.image.caption": "Gründer von Pizzeria Bassi Fondenti",
       // Cookie consent texts
       "cookieConsent.text": "Wir verwenden Cookies, um Ihre Browser-Erfahrung zu verbessern. Bitte wählen Sie Ihre Präferenzen.",
       "cookieConsent.acceptAll": "Alle akzeptieren",
       "cookieConsent.acceptEssential": "Nur essenzielle",
       // CulinaryPhilosophySection texts
       "culinaryPhilosophy.item1.title": "Service und Gastfreundschaft",
-      "culinaryPhilosophy.item1.description": "Wir lieben es, uns um unsere Kunden zu kümmern.",
+      "culinaryPhilosophy.item1.description": "Wir lieben es, uns um unsere Kunden zu kümmern",
       "culinaryPhilosophy.item2.title": "Qualitätszutaten",
-      "culinaryPhilosophy.item2.description": "Wir wählen die besten Mehle aus und verwenden die hochwertigsten saisonalen Produkte.",
+      "culinaryPhilosophy.item2.description": "Wir wählen die besten Mehle aus und verwenden die hochwertigsten saisonalen Produkte",
       "culinaryPhilosophy.item3.title": "Perfekte Kombinationen",
-      "culinaryPhilosophy.item3.description": "Unsere Weinkarte bietet zahlreiche Optionen, nicht nur regionale.",
+      "culinaryPhilosophy.item3.description": "Unsere Weinkarte bietet zahlreiche Optionen, nicht nur regionale",
       // Footer texts
       "footer.tagline": "Authentizität in jedem Biss.",
       "footer.description": "Unsere Leidenschaft für Pizza spiegelt sich in jedem Gericht wider, das wir servieren!",
       "footer.quickLinksHeader": "Schnellzugriffe",
       "footer.contactHeader": "Kontakt",
-      "footer.address.line1": "Via Cavour , 43",
-      "footer.address.line2": "97019, Vittoria , RG",
+      "footer.address.line1": "Via Cavour, 43",
+      "footer.address.line2": "97019, Vittoria, RG",
       "footer.phone": "Tel: +39 0932 161 8460",
       "footer.email": "bassifondenti@gmail.com",
       "footer.hours.weekdays": "Montag-Sonntag: 12-14, 19-00",
-     
-      "footer.copyright": "© {{year}} Bassi Fondenti. Alle Rechte vorbehalten.",
+      "footer.copyright": "© {{year}} Pizzeria Bassi Fondenti. Alle Rechte vorbehalten.",
       // PressSection texts
-      "pressSection.heading": "Presse & Auszeichnungen",
+      "pressSection.heading": "AUSZEICHNUNGEN UND PRESSE",
       "pressSection.leftArticle.title": "Ausgezeichnet vom Gambero Rosso mit 'Uno Spicchio' im Pizzerien-Guide Italien 2025",
       "pressSection.leftArticle.preview": "Die Brüder Salvatore und Rosario Mirenda wurden für ihre Pizzeria Bassi Fondenti in Cefalù mit der renommierten Auszeichnung vom Gambero Rosso geehrt. Der 'Pizzerien-Guide Italien 2025' verlieh ihnen 'Uno Spicchio', was ihre Hingabe an die Kunst der Pizza und die Verwendung hochwertiger Zutaten würdigt.",
       "pressSection.leftArticle.imageAlt": "Gambero Rosso Auszeichnung",
@@ -262,7 +220,58 @@ const resources = {
       "pressSection.readMoreArticles": "Weitere Artikel lesen",
       // Team Gallery texts
       "teamGallerySection.heading": "GALERIE",
-     
+    }
+  },
+  es: {
+    translation: {
+      // CallToActionButtons texts
+      reservationButton: "Reservar una mesa",
+      viewMenuButton: "Ver Menú",
+      // Navbar texts
+      "navbar.logoAlt": "Pizzeria Bassi Fondenti",
+      "navbar.toggleMenu": "Mostrar/Ocultar menú",
+      "navbar.home": "Inicio",
+      "navbar.menu": "Menú",
+      "navbar.gallery": "Galería",
+      "navbar.press": "Prensa",
+      "navbar.reservation": "Reservas",
+      // HistorySection texts
+      "historySection.title": "NUESTRA HISTORIA",
+      "historySection.paragraph1": "En el centro histórico de Vittoria, Bassifondenti es una realidad gastronómica que gira en torno al concepto de 'familia'.",
+      "historySection.paragraph2": "Adquirida por los cónyuges <b>Mario Giombarresi y Alina Caprian</b> en marzo de 2019, junto con su pequeño <b>Valerio</b>, el restaurante tiene una personalidad 'gourmet' que se refleja tanto en los platos del menú del restaurante como en las pizzas.",
+      "historySection.paragraph3": "La elección de las <b>materias primas</b> recae en productos genuinos, de alta calidad y de origen local, suministrados por empresas locales. Un fuerte vínculo entre <b>pizza y cocina</b> sigue el hilo de la <b>estacionalidad</b>, que se refleja en las variaciones del menú cada 4 meses. Esta realidad ofrece la posibilidad de hacer una verdadera <b>experiencia gustativa</b> cambiando también de <b>ubicación</b>: en invierno, una especie de <b>jardín exterior cubierto</b>, en verano, vista completa al mar desde el <b>muelle de Scoglitti</b>.",
+      "historySection.image.caption": "Fundadores de Pizzeria Bassi Fondenti",
+      // Cookie consent texts
+      "cookieConsent.text": "Utilizamos cookies para mejorar su experiencia de navegación. Elija sus preferencias.",
+      "cookieConsent.acceptAll": "Aceptar todas",
+      "cookieConsent.acceptEssential": "Solo esenciales",
+      // CulinaryPhilosophySection texts
+      "culinaryPhilosophy.item1.title": "Servicio y hospitalidad",
+      "culinaryPhilosophy.item1.description": "Nos encanta cuidar a nuestros clientes",
+      "culinaryPhilosophy.item2.title": "Ingredientes de calidad",
+      "culinaryPhilosophy.item2.description": "Seleccionamos las mejores harinas y elegimos los productos de temporada más refinados",
+      "culinaryPhilosophy.item3.title": "Maridajes perfectos",
+      "culinaryPhilosophy.item3.description": "Nuestra carta de vinos ofrece muchas opciones, no solo locales",
+      // Footer texts
+      "footer.tagline": "Autenticidad en cada bocado.",
+      "footer.description": "¡Nuestra pasión por la pizza se refleja en cada plato que servimos!",
+      "footer.quickLinksHeader": "Enlaces rápidos",
+      "footer.contactHeader": "Contactos",
+      "footer.address.line1": "Via Cavour, 43",
+      "footer.address.line2": "97019, Vittoria, RG",
+      "footer.phone": "Tel: +39 0932 161 8460",
+      "footer.email": "bassifondenti@gmail.com",
+      "footer.hours.weekdays": "Lunes-Domingo: 12-14, 19-00",
+      "footer.copyright": "© {{year}} Pizzeria Bassi Fondenti. Todos los derechos reservados.",
+      // PressSection texts
+      "pressSection.heading": "RECONOCIMIENTOS Y PRENSA",
+      "pressSection.leftArticle.title": "Premiados por Gambero Rosso con 'Uno Spicchio' en la Guía de Pizzerías de Italia 2025",
+      "pressSection.leftArticle.preview": "Los hermanos Salvatore y Rosario Mirenda han conseguido el prestigioso reconocimiento de Gambero Rosso con su pizzería Bassi Fondenti en Cefalù. La guía 'Pizzerías de Italia 2025' les ha otorgado 'Uno Spicchio', premiando su dedicación al arte de la pizza y el uso de ingredientes de alta calidad.",
+      "pressSection.leftArticle.imageAlt": "Reconocimiento Gambero Rosso",
+      "pressSection.article.readMore": "Leer el artículo completo",
+      "pressSection.readMoreArticles": "Leer más artículos",
+      // Team Gallery texts
+      "teamGallerySection.heading": "GALERÍA",
     }
   }
 };
