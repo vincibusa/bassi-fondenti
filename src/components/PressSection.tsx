@@ -76,11 +76,11 @@ const PressSection: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-foreground text-lg md:text-xl mb-8 leading-relaxed"
+                className="text-foreground text-lg md:text-xl leading-relaxed"
                 style={{ fontFamily: '"Gambetta", Sans-serif' }}
               >
-Alla base dei nostri impasti solo ingredienti di altissima qualità.
-Il lievito madre è base di partenza per la creazione di un prefermento. L’impasto ha un’idratazione del 75% e subisce una lievitazione di 72 ore. Cotta in forno a legna, la nostra pizza può definirsi una <b>contemporanea</b> dal bordo alto.
+Dalle farine al lievito madre, l’ingrediente segreto è la qualità. Dopo la creazione di un prefermento e una lievitazione lunga 72 ore, gli impasti ben alveolati danno vita alla nostra 
+<b>pizza contemporanea</b> dal bordo alto, cotta sapientemente in forno a legna. 
               </motion.p>
 
               <motion.p 
