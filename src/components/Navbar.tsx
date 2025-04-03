@@ -54,6 +54,42 @@ const Navbar = () => {
       isExternal: true 
     },
     { key: "gallery", label: t("navbar.gallery"), route: "/galleria", isExternal: false },
+    { 
+      key: "press", 
+      label: t("navbar.press"), 
+      route: "/#press", 
+      isExternal: false,
+      onClick: (e: React.MouseEvent) => {
+        if (location.pathname === "/") {
+          e.preventDefault();
+          const pressSection = document.getElementById("press");
+          if (pressSection) {
+            pressSection.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      }
+    },
+    { 
+      key: "news", 
+      label: t("navbar.news", "Press"), 
+      route: "/#news", 
+      isExternal: false,
+      onClick: (e: React.MouseEvent) => {
+        if (location.pathname === "/") {
+          e.preventDefault();
+          const newsSection = document.getElementById("news");
+          if (newsSection) {
+            newsSection.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      }
+    },
+    { 
+      key: "reservation", 
+      label: t("navbar.reservation"), 
+      route: "https://bassifondenti.myrestoo.net/it/reservar", 
+      isExternal: true 
+    }
   ];
 
   return (
@@ -135,41 +171,6 @@ const Navbar = () => {
                             )}
                           </motion.li>
                         ))}
-                        <motion.li
-                          initial={{ opacity: 0, y: -20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.3, delay: 0.4 }}
-                        >
-                          <Link
-                            to="/#press"
-                            className={`text-white ${hoverClass} transition-colors`}
-                            onClick={(e) => {
-                              if (location.pathname === "/") {
-                                e.preventDefault();
-                                const pressSection = document.getElementById("press");
-                                if (pressSection) {
-                                  pressSection.scrollIntoView({ behavior: "smooth" });
-                                }
-                              }
-                            }}
-                          >
-                            {t("navbar.press")}
-                          </Link>
-                        </motion.li>
-                        <motion.li
-                          initial={{ opacity: 0, y: -20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.3, delay: 0.3 }}
-                        >
-                          <a
-                            href="https://bassifondenti.myrestoo.net/it/reservar"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={`text-white ${hoverClass} transition-colors`}
-                          >
-                            {t("navbar.reservation")}
-                          </a>
-                        </motion.li>
                       </ul>
                     </motion.div>
                   )}

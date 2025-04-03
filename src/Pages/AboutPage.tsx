@@ -4,6 +4,7 @@ import HistorySection from "../components/HistorySection";
 import TeamGallerySection from "../components/TeamGallerySection";
 import CulinaryPhilosophySection from "../components/CulinaryPhilosophySection";
 import PressSection from "../components/PressSection";
+import NewsSection from "../components/NewsSection";
 import BackToTopButton from "../components/BackToTopButton";
 
 const AboutPage: React.FC = () => {
@@ -24,9 +25,10 @@ const AboutPage: React.FC = () => {
   return (
     <div className="overflow-hidden">
       <HistorySection />
-  <TeamGallerySection />
+      <TeamGallerySection />
       <CulinaryPhilosophySection />
       <PressSection />
+      <NewsSection />
       {showTopBtn && <BackToTopButton onClick={goToTop} />}
     </div>
   );

@@ -11,7 +11,7 @@ const resources = {
       "navbar.home": "Home",
       "navbar.menu": "Menu",
       "navbar.gallery": "Gallery",
-      "navbar.press": "Press",
+      "navbar.press": "Pizza",
       "navbar.reservation": "Reservations",
       "historySection.title": "OUR STORY",
       "historySection.paragraph1": "In the historic center of Vittoria, Bassifondenti is a dining reality that revolves around the concept of 'family'.",
@@ -52,7 +52,7 @@ const resources = {
       "navbar.home": "Home",
       "navbar.menu": "Menu",
       "navbar.gallery": "Galleria",
-      "navbar.press": "Press",
+      "navbar.press": "Pizza",
       "navbar.reservation": "Prenotazioni",
       // HistorySection texts
       "historySection.title": "LA NOSTRA STORIA",
@@ -118,7 +118,7 @@ const resources = {
       "navbar.home": "Accueil",
       "navbar.menu": "Menu",
       "navbar.gallery": "Galerie",
-      "navbar.press": "Presse",
+      "navbar.press": "Pizza",
       "navbar.reservation": "Réservations",
       // HistorySection texts
       "historySection.title": "NOTRE HISTOIRE",
@@ -181,7 +181,7 @@ const resources = {
       "navbar.home": "Startseite",
       "navbar.menu": "Menü",
       "navbar.gallery": "Galerie",
-      "navbar.press": "Presse",
+      "navbar.press": "Pizza",
       "navbar.reservation": "Reservierungen",
       // HistorySection texts
       "historySection.title": "UNSERE GESCHICHTE",
@@ -233,7 +233,7 @@ const resources = {
       "navbar.home": "Inicio",
       "navbar.menu": "Menú",
       "navbar.gallery": "Galería",
-      "navbar.press": "Prensa",
+      "navbar.press": "Pizza",
       "navbar.reservation": "Reservas",
       // HistorySection texts
       "historySection.title": "NUESTRA HISTORIA",

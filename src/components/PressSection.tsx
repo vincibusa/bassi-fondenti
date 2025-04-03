@@ -9,41 +9,29 @@ import Basilico from "../assets/basilico.jpg"
 
 interface DoughType {
   title: string;
-
   image: string;
-
 }
 
 const doughTypes: DoughType[] = [
   {
     title: "Impasto classico",
-   
     image: Classico,
-  
   },
   {
     title: "Impasto ai funghi porcini",
-
     image: Porcini,
-
   },
   {
     title: "Impasto ai cereali",
-  
     image: Cereali,
-
   },
   {
     title: "Impasto al carbone vegetale",
-
     image: Carbone,
-
   },
   {
     title: "Impasto al basilico",
- 
     image: Basilico,
-
   }
 ];
 
@@ -79,7 +67,7 @@ const PressSection: React.FC = () => {
                 className="text-foreground text-lg md:text-xl leading-relaxed"
                 style={{ fontFamily: '"Gambetta", Sans-serif' }}
               >
-Dalle farine al lievito madre, l’ingrediente segreto è la qualità. Dopo la creazione di un prefermento e una lievitazione lunga 72 ore, gli impasti ben alveolati danno vita alla nostra 
+Dalle farine al lievito madre, l'ingrediente segreto è la qualità. Dopo la creazione di un prefermento e una lievitazione lunga 72 ore, gli impasti ben alveolati danno vita alla nostra 
 <b>pizza contemporanea</b> dal bordo alto, cotta sapientemente in forno a legna. 
               </motion.p>
 
@@ -122,7 +110,6 @@ Dalle farine al lievito madre, l’ingrediente segreto è la qualità. Dopo la c
                       style={{ fontFamily: '"Gambetta", Sans-serif' }}>
                     {dough.title}
                   </h4>
-             
                 </div>
               </motion.div>
             ))}
